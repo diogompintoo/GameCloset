@@ -19,7 +19,7 @@ public class Main {
             System.out.print("SELECT: ");
 
             int option = scanner.nextInt();
-            scanner.nextLine(); // limpa buffer
+            scanner.nextLine();
 
             if (option == 1) {
                 System.out.print("Title: "); String title = scanner.nextLine();
