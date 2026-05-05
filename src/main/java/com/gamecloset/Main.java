@@ -6,9 +6,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Inventory inventory = new Inventory();
 
-        System.out.println("════════════════════════════════════");
-        System.out.println("🎮 GAME CLOSET - Material Inventory");
-        System.out.println("════════════════════════════════════");
+        System.out.println("GAME CLOSET - Material Inventory");
+
 
         while (true) {
             System.out.println("\n1. ADD GAME (manually)");
