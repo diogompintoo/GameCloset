@@ -1,6 +1,8 @@
 package com.gamecloset;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.*;
+import java.nio.file.*;
 
 public class Inventory {
     private ArrayList<Game> games = new ArrayList<>();
