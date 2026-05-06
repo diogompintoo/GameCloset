@@ -6,7 +6,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Inventory inventory = new Inventory();
 
-        System.out.println("GAME CLOSET - Material Inventory");
+        System.out.println("GAME CLOSET - Game and Console Inventory");
 
 
         while (true) {

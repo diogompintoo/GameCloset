@@ -17,8 +17,11 @@ public class Game {
         this.price = price;
     }
     public String getTitle () { return title; }
+    public String getGenre () { return gameGender; }
     public String getPlatform() { return platform; }
-
+    public int getYear() { return year; }
+    public String getCondition() { return condition; }
+    public double getPrice() { return price; }
 
     public String toString() {
         return String.format(" %s (%s - %s) | %d | %s | €%.2f", title, gameGender, platform, year, condition, price);
