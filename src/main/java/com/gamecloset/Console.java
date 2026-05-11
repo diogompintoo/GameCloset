@@ -15,6 +15,7 @@ public class Console {
         this.price = price;
     }
     public String toString() {
-        return String.format("%s %s %s %s %.2f", name, brand, lunchYear, state, price);
+        return String.format("%s;%s;%s;%s;%.2f",
+                name, brand, lunchYear, state, price);
     }
 }
