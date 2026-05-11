@@ -65,15 +65,48 @@ public class Inventory {
 
     public void loadFromFile() {
         Path path = Paths.get(FILE_PATH);
+
         if (!Files.exists(path)) return ;
 
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_PATH))){
             String line;
             while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(";");
-                System.out.println("Loading " + line);
+                if (line.startsWith("GAME: ")) {
+
+                    line = line.replace("GAME: ", "");
+
+                    String[] parts = line.split(";");
+
+                    String title = parts[0];
+                    String genre = parts[1];
+                    String platform = parts[2];
+                    int year = Integer.parseInt(parts[3]);
+                    String condition = parts[4];
+                    double price = Double.parseDouble(parts[5]);
+
+                    Game game = new Game(title, genre, platform, year, condition, price);
+
+                    games.add(game);
+
+                } else if (line.startsWith("CONSOLE: ")) {
+
+                    line = line.replace("CONSOLE: ", "");
+
+                    String[] parts = line.split(";");
+
+                    String name = parts[0];
+                    String brand = parts[1];
+                    int year = Integer.parseInt(parts[2]);
+                    String condition = parts[3];
+                    double price = Double.parseDouble(parts[4]);
+
+                    Console console = new Console(name, brand, year, condition, price);
+
+                    consoles.add(console);
+                }
             }
-        }catch (IOException e) {
+
+        } catch (IOException e) {
             System.out.println("Error reading file");
         }
     }
